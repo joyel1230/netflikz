@@ -63,12 +63,12 @@ function Rowpost(props) {
   };
 
   return (
-    <div className="row">
+    <div className="row" onMouseLeave={()=>setUrlId(null)}>
       <h2>{props.title}</h2>
       <div className="posters">
         {movies.map((movie, i) => {
           return (
-            <div onMouseLeave={()=>setUrlId(null)}>
+            <div >
               {idx === i && urlId ? (
                 <Youtube
                   className={props.isSmall ? "small-poster" : "poster"}
